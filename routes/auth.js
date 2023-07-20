@@ -18,7 +18,7 @@ router.post('/new', [
 router.post('/', [
     check('email', 'email required').isEmail(),
     check('password', 'password required').not().isEmpty(),
-    validateFields
+    
 ], login);
 
 router.get('/renew', validateJWT, renewToken);
